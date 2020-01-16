@@ -1,0 +1,14 @@
+.details-card {
+     margin: 12px;
+     width: 60%;
+}
+
+.goback {
+    margin: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+    .details-card {
+    width: 100%;
+    }
+}

@@ -1,0 +1,24 @@
+
+.about-me-card {
+    width: 70%;
+    float: center;
+    margin: 22px;
+}
+.title-name {
+    text-align: center;
+    color: brown;
+}
+.title-name-lable {
+    text-align: center;
+}
+
+.info-div {
+    color: peru;
+}
+.info {
+    margin: 12px;
+}
+
+.info-title {
+font-weight: bold;
+}

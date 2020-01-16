@@ -1,0 +1,63 @@
+<h4 class="top-header"> {{ title }} </h4>
+<div>
+  <!--<input [(ngModel)]="customer.name" placeholder="name"/>-->
+  <!--<li *ngFor="let cus of customer" (click)="onSelect(cus)">
+    <span class="badge">{{ cus.id }}</span> : {{ cus.name }}
+  </li>-->
+  <mat-card class="tab-details">
+    <mat-tab-group class="demo-tab-group" [(selectedIndex)]="selected">
+      <mat-tab label="Customer List">
+        <mat-list class="list-view">
+            <mat-card *ngFor="let cus of customer" (click)="onSelect(cus)" class="list-details">
+             <a routerLink="/detail/{{cus.id}}">
+     <span> {{ cus.name}} </span>
+      <!--<h4 mat-line>{{ cus.id }}</h4>
+      <p mat-line> {{ cus.name }} </p>-->
+     </a>
+      <!--<mat-chip-list class="delete-button" >
+         <mat-chip  (click)="delete(cus)" class="delete-button" [color]="primary">
+         <span   matTooltip="Delete"> delete </span>
+         </mat-chip> 
+          </mat-chip-list>-->
+          <button mat-icon-button color="warn" class="delete-button" (click)="delete(cus)">
+    <mat-icon aria-label="Example icon-button with a delete icon">delete</mat-icon>
+  </button>
+              </mat-card>
+        </mat-list>
+      </mat-tab>
+      <mat-tab label="Add Customer" >
+
+        <mat-card class="details-card">
+          <form>
+            <mat-list>
+
+              <mat-form-field>
+                <input matInput id="name" name="name" [(ngModel)]="newCustomer.name" placeholder="name">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <input matInput id="phone" name="phone" [(ngModel)]="newCustomer.phone" placeholder="phone">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <input matInput id="email" name="email" [(ngModel)]="newCustomer.email" placeholder="email">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <textarea matInput id="address" name="address" [(ngModel)]="newCustomer.address.street" placeholder="address"></textarea>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <input matInput id="city" name="city" [(ngModel)]="newCustomer.address.city" placeholder="city">
+              </mat-form-field>
+
+            </mat-list>
+            <button mat-raised-button color="primary" (click)="save(newCustomer)">Save</button>
+          </form>
+        </mat-card>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+
+</div>
+<!--<app-customer-details [customer]="selectedCustomer"></app-customer-details>-->

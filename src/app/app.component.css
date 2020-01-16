@@ -1,0 +1,97 @@
+@media only screen and (max-width: 600px) {
+    .app-title{
+        text-align: center;
+    }
+    .about-me{
+        float : inherit;
+    }
+}
+
+.shadow{
+    background: #343f4f;
+}
+
+.shadow {    
+  -webkit-box-shadow: 0 6px 4px -4px black;
+  -moz-box-shadow: 0 6px 4px -4px black;
+  box-shadow: 0 4px 6px -4px gray;
+}
+
+.shadow .app-title {
+    color: #ffffff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.header ul {
+  height : 50px;
+  background: #343f4f;
+  box-shadow : 0 0 1.5px black;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #ff8b96; 
+}
+
+.header ul li {
+  text-align:center;
+}
+
+.header ul .menu {
+  margin: 8px;
+  padding: 8px 12px;
+  display: inline-block;
+  background: #fff;
+  color: #000 !important;
+  position: relative;
+  border-radius: 4px;
+}
+
+.menu > a {
+    color: #000 !important;
+}
+
+.header ul .menu:hover {
+  background: #ff5969;
+  color: #fff;
+  box-shadow : 0 2px #ffeb3b;
+}
+
+/* Tooltip text */
+.menu .tooltiptext {
+   visibility: hidden;
+    width: 80px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 6px 4px;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -45px;
+    margin-top: 7px;
+    font-size: 12px;
+}
+
+
+.menu .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.menu:hover .tooltiptext {
+    visibility: visible;
+}

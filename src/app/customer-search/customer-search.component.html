@@ -1,0 +1,38 @@
+<div>
+
+   <!--<mat-form-field class="example-full-width">
+    <input matInput placeholder="State" aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+        <img style="vertical-align:middle;" aria-hidden src="{{state.flag}}" height="25" />
+        <span>{{ state.name }}</span> |
+        <small>Population: {{state.population}}</small>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>-->
+
+  <!--<input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+
+   <ul class="search-result">
+    <li *ngFor="let cust of customer$ | async" >
+      <a routerLink="/detail/{{cust.id}}">
+        {{cust.name}}
+      </a>
+    </li>
+  </ul>-->
+
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Customer Search!!" aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let state of customer$ | async" [value]="state.name">
+        <img style="vertical-align:middle;" height="25" />
+        <a routerLink="/detail/{{state.id}}">
+          {{state.name}}
+        </a>
+        <!--<small>Population: {{state.population}}</small>-->
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+</div>

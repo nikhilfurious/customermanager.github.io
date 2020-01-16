@@ -1,0 +1,50 @@
+<div class="top-about-me">
+  <mat-card class="about-me-card">
+
+    <h3 class="title-name">{{about_me.name}}</h3>
+    <div class="title-name-lable">
+      <label> {{about_me.designation}}</label> /
+      <label> {{about_me.location}}</label>
+    </div>
+    <div>
+      <h4 class="info-div">Personal Information</h4>
+      <div class="info">
+        <p><label class="info-title">Mail :</label> {{about_me.mail}}</p>
+        <p><label class="info-title">Contact Number :</label> {{about_me.phone1}}, {{about_me.phone2}}</p>
+        <p><label class="info-title">Linked-in :</label><a target="_blank" href="{{about_me.linked_id}}"> {{about_me.linked_id}} </a></p>
+      </div>
+    </div>
+    <div>
+      <h4 class="info-div">Experience</h4>
+      <div class="info">
+        <p>#1</p>
+        <p><label class="info-title">Duration :</label> {{about_me.Company1.duration}}</p>
+        <p><label class="info-title">Company :</label> {{about_me.Company1.name}}, {{about_me.Company1.location}} </p>
+        <p><label class="info-title">Designation :</label> {{about_me.Company1.role}}</p>
+      </div>
+      <div class="info">
+        <p>#2</p>
+        <p><label class="info-title">Duration :</label> {{about_me.Company2.duration}}</p>
+        <p><label class="info-title">Company :</label> {{about_me.Company2.name}}, {{about_me.Company2.location}} </p>
+        <p><label class="info-title">Designation :</label> {{about_me.Company2.role}}</p>
+      </div>
+    </div>
+    <div>
+      <h4 class="info-div">Education</h4>
+      <div class="info">
+        <p><label class="info-title">Degree :</label> {{about_me.edu}}</p>
+        <p><label class="info-title">College :</label> {{about_me.college}}</p>
+      </div>
+    </div>
+    <div>
+      <h4 class="info-div">Skill Sets</h4>
+      <div class="info">
+         <span *ngFor="let skil of skill">
+        <mat-chip-list style="display: inline-block;">
+  <mat-chip selected="true" [color]="accent">{{skil}}</mat-chip>
+        </mat-chip-list> </span>
+      </div>
+     
+    </div>
+  </mat-card>
+</div>

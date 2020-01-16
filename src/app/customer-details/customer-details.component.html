@@ -1,0 +1,35 @@
+
+
+<div class="goback">
+<!--<button (click)="goBack()">go back</button>-->
+ <a mat-raised-button (click)="goBack()"><span><<</span> back</a>
+</div>
+<div *ngIf="customer">
+  <mat-card class="details-card" >
+    <h5>{{customer.name}} Details !</h5>
+    <form>
+      <mat-list>
+        <mat-form-field>
+          <input matInput id="name" name="name" [(ngModel)]="customer.name" placeholder="name">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput id="phone" name="phone" [(ngModel)]="customer.phone" placeholder="phone">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput id="email" name="email" [(ngModel)]="customer.email" placeholder="email">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <textarea matInput id="address" name="address" [(ngModel)]="customer.address.street" placeholder="address"></textarea>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput id="city" name="city" [(ngModel)]="customer.address.city" placeholder="city">
+        </mat-form-field>
+
+      </mat-list>
+        <button mat-raised-button color="primary" (click)="save()">Save</button>
+    </form>
+  </mat-card>
+</div>

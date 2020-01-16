@@ -1,0 +1,43 @@
+.example-container {
+  /*display: flex;
+  flex-direction: column;*/
+}
+
+.details-card {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.tab-details {
+  margin: 16px;
+}
+
+.top-header{
+  text-align: center;
+  color: lightcoral;
+}
+
+.list-view {
+  margin: 12px;
+  float: center;
+}
+.list-details {
+  margin-bottom: 2px;
+  width: 60%;
+}
+
+.list-details a {
+  color: brown;
+  
+}
+
+.delete-button{
+  float: right;
+}
+
+@media only screen and (max-width: 600px) {
+    .list-details {
+  width: 100%;
+}
+}
+
